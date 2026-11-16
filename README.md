@@ -49,7 +49,7 @@ Numbers are written in international format without a leading `+` or `00`: `3161
 
 ## Delivery reports
 
-Prefer [Push DLR](https://www.budgetsms.net/sms-http-api/push-dlr/): enter a URL in the control panel and BudgetSMS calls it with `id`, `status` and `date` on every status change. With Express:
+Prefer [Push DLR](https://www.budgetsms.net/sms-http-api/push-dlr/): enter a URL in the control panel and BudgetSMS calls it (GET) with `to`, `id`, `status`, `date` and, when you used one, `customid` on every status change. The URL may contain your own query string. Requests come from 188.240.53.76 (IPv4) or 2a01:7c8:bb04:2c:5054:ff:fe60:d620 (IPv6). With Express:
 
 ```js
 app.get('/dlr', (req, res) => {
