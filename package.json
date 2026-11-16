@@ -1,0 +1,20 @@
+{
+  "name": "budgetsms",
+  "version": "1.0.0",
+  "description": "Official Node.js client for the BudgetSMS HTTP API: send SMS worldwide, test calls, check credit, number portability and HLR lookups, delivery status and pricing.",
+  "type": "module",
+  "main": "./index.js",
+  "types": "./index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "import": "./index.js"
+    }
+  },
+  "files": ["index.js", "index.d.ts", "README.md"],
+  "engines": {"node": ">=18"},
+  "keywords": ["sms", "sms api", "sms gateway", "budgetsms", "hlr", "number portability", "otp"],
+  "homepage": "https://www.budgetsms.net/sms-http-api/",
+  "license": "MIT",
+  "author": "BudgetSMS B.V. (https://www.budgetsms.net/)"
+}
