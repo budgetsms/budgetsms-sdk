@@ -8,13 +8,13 @@ Official Node.js client for the [BudgetSMS HTTP API](https://www.budgetsms.net/s
 ## Install
 
 ```bash
-npm install budgetsms
+npm install budgetsms-sdk
 ```
 
 ## Use
 
 ```js
-import { BudgetSms, BudgetSmsError } from 'budgetsms';
+import { BudgetSms, BudgetSmsError } from 'budgetsms-sdk';
 
 const sms = new BudgetSms({ username: 'USERNAME', userid: 'USERID', handle: 'HANDLE' });   // control panel, API details
 

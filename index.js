@@ -111,7 +111,7 @@ export class BudgetSms {
     for (const [key, value] of Object.entries({ ...this.auth, ...params })) url.searchParams.set(key, String(value));
     let response;
     try {
-      response = await fetch(url, { signal: AbortSignal.timeout(this.timeoutMs), headers: { 'User-Agent': 'budgetsms-node/1.0.0' } });
+      response = await fetch(url, { signal: AbortSignal.timeout(this.timeoutMs), headers: { 'User-Agent': 'budgetsms-sdk/1.0.0' } });
     } catch (e) {
       throw new BudgetSmsError('transport', `BudgetSMS unreachable: ${e.message}`);
     }
