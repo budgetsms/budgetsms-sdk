@@ -34,11 +34,11 @@ export interface Lookup {
   price: number;
 }
 
-/** Price row of pricing(), keyed by operator id. Values are strings as delivered by the API. */
+/** Price row of pricing(), keyed by operator id. Types as delivered by the API: prefix and mcc are numbers, the rest strings. */
 export interface PriceRow {
-  countryprefix: string;
+  countryprefix: number;
   countryname: string;
-  mcc: string;
+  mcc: number;
   operatorname: string;
   mnc: string;
   price: string;
