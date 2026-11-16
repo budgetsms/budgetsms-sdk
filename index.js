@@ -50,7 +50,11 @@ export class BudgetSms {
     return this.#submit('sendsms', to, message, from, options);
   }
 
-  /** Same as sendSms, but nothing is sent and nothing is charged: validates the call and returns the price. */
+  /**
+   * Simulator for sendSms: same parameters and result shape, nothing is sent or charged. The API checks your
+   * credentials and returns a random message id and price; about one in five calls rejects with a random 2xxx
+   * BudgetSmsError on purpose so error handling can be tested. The destination is not validated.
+   */
   testSms(to, message, from, options = {}) {
     return this.#submit('testsms', to, message, from, options);
   }

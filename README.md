@@ -27,7 +27,7 @@ try {
 }
 ```
 
-While developing, use `testSms()` with the same arguments: it validates everything and returns the price, but sends nothing and charges nothing.
+While developing, use `testSms()` with the same arguments. It is a simulator: your credentials are checked and the result has the same shape, but nothing is sent or charged, the message id and price are random, and about one in five calls rejects with a random `2xxx` error so you can test your error handling. Real prices come from `pricing()`.
 
 ```js
 const test = await sms.testSms('31612345678', 'Hello', 'MyCompany');
